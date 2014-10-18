@@ -11020,7 +11020,7 @@ diff -uNr vim74/src/Makefile vimgdb74/src/Makefile
  #CFLAGS = -g -Wall -Wmissing-prototypes
 -#CFLAGS = -O6 -fno-strength-reduce -Wall -Wshadow -Wmissing-prototypes
 +# CFLAGS = -O6 -fno-strength-reduce -Wall -Wshadow -Wmissing-prototypes
-+CFLAGS = -O6
++# CFLAGS = -O6
  #CFLAGS = -g -DDEBUG -Wall -Wshadow -Wmissing-prototypes
  #CFLAGS = -g -O2 '-DSTARTUPTIME="vimstartup"' -fno-strength-reduce -Wall -Wmissing-prototypes
  
@@ -11028,7 +11028,7 @@ diff -uNr vim74/src/Makefile vimgdb74/src/Makefile
 -#CFLAGS = -g -Wall -Wextra -Wmissing-prototypes -Wunreachable-code -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1
 -#CFLAGS = -g -O2 -Wall -Wextra -Wmissing-prototypes -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -DU_DEBUG
 +# CFLAGS = -g -Wall -Wextra -Wmissing-prototypes -Wunreachable-code -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1
-+# CFLAGS = -g -O2 -Wall -Wextra -Wmissing-prototypes -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -DU_DEBUG
++CFLAGS = -g -O2 -Wall -Wextra -Wmissing-prototypes -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -DU_DEBUG
  #PYTHON_CFLAGS_EXTRA = -Wno-missing-field-initializers
  #MZSCHEME_CFLAGS_EXTRA = -Wno-unreachable-code -Wno-unused-parameter
  
@@ -11046,13 +11046,13 @@ diff -uNr vim74/src/Makefile vimgdb74/src/Makefile
  #
  # Uncomment the next line to install Vim in "/usr/bin"
 -#BINDIR   = /usr/bin
-+BINDIR   = /opt/bin
++#BINDIR   = /opt/bin
  # Uncomment the next line to install Vim manuals in "/usr/share/man/man1"
 -#MANDIR   = /usr/share/man
-+MANDIR   = /opt/share/man
++#MANDIR   = /opt/share/man
  # Uncomment the next line to install Vim help files in "/usr/share/vim"
 -#DATADIR  = /usr/share
-+DATADIR  = /opt/share
++#DATADIR  = /opt/share
  
  ### DESTDIR	root of the installation tree.  This is prepended to the other
  #		directories.  This directory must exist.
