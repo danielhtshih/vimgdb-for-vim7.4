@@ -11396,6 +11396,15 @@ diff -uNr vim74/src/os_unix.c vimgdb74/src/os_unix.c
  	    if (do_resize)	    /* interrupted by SIGWINCH signal */
  		handle_resize();
  	    return 0;
+@@ -827,7 +884,7 @@
+ 		|| MAC_OS_X_VERSION_MAX_ALLOWED <= 1040)
+ 	/* missing prototype.  Adding it to osdef?.h.in doesn't work, because
+ 	 * "struct sigaltstack" needs to be declared. */
+-	extern int sigaltstack __ARGS((const struct sigaltstack *ss, struct sigaltstack *oss));
++	extern int sigaltstack __ARGS((const stack_t *restrict ss, stack_t *restrict oss));
+ #  endif
+ 
+ #  ifdef HAVE_SS_BASE
 @@ -905,6 +962,30 @@
  }
  #endif
